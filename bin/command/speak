@@ -3,19 +3,24 @@
 # shellcheck disable=SC2006
 
 # ノーマル
-SPEAKER_STYLE_ID='3'
+PRESET_ID=1
+STYLE_ID=3
 
 # あまあま
-# SPEAKER_STYLE_ID='1'
+#PRESET_ID=2
+#STYLE_ID=1
 
 # セクシー
-# SPEAKER_STYLE_ID='3'
+#PRESET_ID=3
+#STYLE_ID=5
 
 # ささやき
-# SPEAKER_STYLE_ID='22'
+#PRESET_ID=5
+#STYLE_ID=22
 
 # ヒソヒソ
-# SPEAKER_STYLE_ID='38'
+#PRESET_ID=6
+#STYLE_ID=38
 
 if [ $# -eq 0 ];then
   text=`cat speak.txt`
@@ -25,7 +30,7 @@ fi
 
 curl -s \
     -X POST \
-    "localhost:50021/audio_query?speaker=$SPEAKER_STYLE_ID"\
+    "localhost:50021/audio_query_from_preset?preset_id="$PRESET_ID\
     --get --data-urlencode text=$text \
     > output/query.json
 
@@ -33,7 +38,7 @@ curl -s \
     -H "Content-Type: application/json" \
     -X POST \
     -d @output/query.json \
-    "localhost:50021/synthesis?speaker="$SPEAKER_STYLE_ID \
+    "localhost:50021/synthesis?speaker="$STYLE_ID \
     > output/audio.wav
 
 afplay output/audio.wav

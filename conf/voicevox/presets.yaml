@@ -1,0 +1,65 @@
+- id: 1
+  name: ノーマル
+  speaker_uuid: 388f246b-8c41-4ac1-8e2d-5d79f3ff56d9
+  style_id: 3
+  speedScale: 1
+  pitchScale: 0
+  intonationScale: 1
+  volumeScale: 1
+  prePhonemeLength: 0.1
+  postPhonemeLength: 0.1
+
+- id: 2
+  name: あまあま
+  speaker_uuid: 388f246b-8c41-4ac1-8e2d-5d79f3ff56d9
+  style_id: 1
+  speedScale: 1
+  pitchScale: 0
+  intonationScale: 1
+  volumeScale: 1
+  prePhonemeLength: 0.1
+  postPhonemeLength: 0.1
+
+- id: 3
+  name: ツンツン
+  speaker_uuid: 388f246b-8c41-4ac1-8e2d-5d79f3ff56d9
+  style_id: 7
+  speedScale: 1
+  pitchScale: 0
+  intonationScale: 1
+  volumeScale: 1
+  prePhonemeLength: 0.1
+  postPhonemeLength: 0.1
+
+- id: 4
+  name: セクシー
+  speaker_uuid: 388f246b-8c41-4ac1-8e2d-5d79f3ff56d9
+  style_id: 5
+  speedScale: 1
+  pitchScale: 0
+  intonationScale: 1
+  volumeScale: 1
+  prePhonemeLength: 0.1
+  postPhonemeLength: 0.1
+
+- id: 5
+  name: ささやき
+  speaker_uuid: 388f246b-8c41-4ac1-8e2d-5d79f3ff56d9
+  style_id: 22
+  speedScale: 1
+  pitchScale: 0
+  intonationScale: 1
+  volumeScale: 1
+  prePhonemeLength: 0.1
+  postPhonemeLength: 0.1
+
+- id: 6
+  name: ヒソヒソ
+  speaker_uuid: 388f246b-8c41-4ac1-8e2d-5d79f3ff56d9
+  style_id: 38
+  speedScale: 1
+  pitchScale: 0
+  intonationScale: 1
+  volumeScale: 1
+  prePhonemeLength: 0.1
+  postPhonemeLength: 0.1

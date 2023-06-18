@@ -1,4 +1,4 @@
 #!/bin/bash
 curl -X 'GET' \
-  'http://127.0.0.1:50021/speakers' \
+  'http://127.0.0.1:50021/presets' \
   -H 'accept: application/json' | jq .

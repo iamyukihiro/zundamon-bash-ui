@@ -1,6 +1,12 @@
-version: '3.3'
+version: '3.9'
+
 services:
-  voicevox_engine:
+  zundamon_bash_ui:
+    container_name: zundamon-bash-ui
     ports:
       - '127.0.0.1:50021:50021'
     image: 'voicevox/voicevox_engine:cpu-latest'
+    volumes:
+      - type: bind
+        source: ../conf/voicevox/presets.yaml
+        target: /opt/voicevox_engine/presets.yaml
