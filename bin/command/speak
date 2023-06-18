@@ -1,0 +1,29 @@
+#!/bin/bash
+
+# ノーマル
+SPEAKER_STYLE_ID='3'
+
+# あまあま
+# SPEAKER_STYLE_ID='1'
+
+# セクシー
+# SPEAKER_STYLE_ID='3'
+
+# ささやき
+# SPEAKER_STYLE_ID='22'
+
+# ヒソヒソ
+# SPEAKER_STYLE_ID='38'
+
+curl -s \
+    -X POST \
+    "localhost:50021/audio_query?speaker="$SPEAKER_STYLE_ID\
+    --get --data-urlencode text@speak.txt \
+    > output/query.json
+
+curl -s \
+    -H "Content-Type: application/json" \
+    -X POST \
+    -d @output/query.json \
+    "localhost:50021/synthesis?speaker="$SPEAKER_STYLE_ID \
+    > output/audio.wav
