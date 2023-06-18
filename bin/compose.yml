@@ -10,3 +10,12 @@ services:
       - type: bind
         source: ../conf/voicevox/presets.yaml
         target: /opt/voicevox_engine/presets.yaml
+
+  zundamon_bash_ui_whisper:
+    container_name: zundamon-bash-ui-whisper
+    image: 'ghcr.io/iamyukihiro/whisper-image:v20230314'
+    volumes:
+      - type: bind
+        source: ../output/
+        target: /home/whisper/output/
+    tty: true
