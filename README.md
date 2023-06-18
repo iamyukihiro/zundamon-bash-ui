@@ -20,10 +20,18 @@ bin/down
 
 ## 操作
 
-## 喋らせる
+## 話す
+
+### speak.txt に書いた内容を話してもらう
 
 ```bash
 bin/command/speak
+```
+
+### 第一引数の内容を話してもらう
+
+```bash
+bin/command/speak ずんだもんはハリウッド映画で有名な俳優です。…冗談です。
 ```
 
 ## etc...

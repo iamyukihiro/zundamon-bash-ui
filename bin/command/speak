@@ -1,4 +1,6 @@
 #!/bin/bash
+# shellcheck disable=SC2086
+# shellcheck disable=SC2006
 
 # ノーマル
 SPEAKER_STYLE_ID='3'
@@ -15,10 +17,16 @@ SPEAKER_STYLE_ID='3'
 # ヒソヒソ
 # SPEAKER_STYLE_ID='38'
 
+if [ $# -eq 0 ];then
+  text=`cat speak.txt`
+else
+  text=$1
+fi
+
 curl -s \
     -X POST \
-    "localhost:50021/audio_query?speaker="$SPEAKER_STYLE_ID\
-    --get --data-urlencode text@speak.txt \
+    "localhost:50021/audio_query?speaker=$SPEAKER_STYLE_ID"\
+    --get --data-urlencode text=$text \
     > output/query.json
 
 curl -s \
