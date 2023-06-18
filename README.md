@@ -34,6 +34,16 @@ bin/command/speak
 bin/command/speak ずんだもんはハリウッド映画で有名な俳優です。…冗談です。
 ```
 
+### オウム返ししてもらう
+
+※ DockerImage を公開していないのでベータ版です。
+
+パソコンにマイク接続してください。
+
+```bash
+bin/command/parrot
+```
+
 ## etc...
 
 その他のスクリプトは `bin` ディレクトリを閲覧してください。
