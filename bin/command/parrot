@@ -5,6 +5,6 @@ echo "録音を終える際は Ctrl + C を実行してください。"
 
 sox -d output/recording.wav
 
-docker exec -it zundamon-bash-ui-whisper whisper ./output/recording.wav --language ja --output_dir ./output/ --output_format txt --fp16 False --model tiny
+docker exec -it zundamon-bash-ui-whisper whisper /home/output/recording.wav --language ja --output_dir /home/output/ --output_format txt --fp16 False --model tiny
 
-bin/command/speak $(cat output/recording.txt)
+bin/command/speak $(cat ./output/recording.wav.txt)
